@@ -71,7 +71,40 @@ void nivelAventureiro() {
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+void nivelMestre() {
 
+    printf("\n=== NIVEL MESTRE ===\n");
+
+    /* CRUZ */
+    int cruz[5][5] = {0};
+
+    for(int i = 0; i < 5; i++){
+        cruz[2][i] = 1;
+        cruz[i][2] = 1;
+    }
+
+    printf("\nHabilidade Cruz:\n");
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++)
+            printf("%d ", cruz[i][j]);
+        printf("\n");
+    }
+
+    /* OCTAEDRO */
+    int octaedro[5][5] = {0};
+
+    octaedro[0][2] = 1;
+    octaedro[1][1] = 1;
+    octaedro[1][2] = 1;
+    octaedro[1][3] = 1;
+    octaedro[2][2] = 1;
+
+    printf("\nHabilidade Octaedro:\n");
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++)
+            printf("%d ", octaedro[i][j]);
+        printf("\n");
+    }
     // Exemplos de exibição das habilidades:
     // Exemplo para habilidade em cone:
     // 0 0 1 0 0
