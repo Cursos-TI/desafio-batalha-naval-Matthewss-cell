@@ -37,6 +37,35 @@ int main() {
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
     // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+void nivelAventureiro() {
+
+    int tabuleiro[TAM][TAM] = {0};
+
+    // Horizontal
+    for(int i = 2; i < 5; i++)
+        tabuleiro[1][i] = 3;
+
+    // Vertical
+    for(int i = 4; i < 7; i++)
+        tabuleiro[i][7] = 3;
+
+    // Diagonal principal
+    for(int i = 0; i < 3; i++)
+        tabuleiro[6+i][1+i] = 3;
+
+    // Diagonal secundária
+    for(int i = 0; i < 3; i++)
+        tabuleiro[2+i][9-i] = 3;
+
+    printf("\n=== NIVEL AVENTUREIRO ===\n\n");
+
+    for(int i = 0; i < TAM; i++){
+        for(int j = 0; j < TAM; j++){
+            printf("%d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+}
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
