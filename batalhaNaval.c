@@ -75,22 +75,36 @@ void nivelMestre() {
 
     printf("\n=== NIVEL MESTRE ===\n");
 
-    /* CRUZ */
-    int cruz[5][5] = {0};
 
-    for(int i = 0; i < 5; i++){
-        cruz[2][i] = 1;
-        cruz[i][2] = 1;
-    }
+    // Exemplos de exibição das habilidades:
+    // Exemplo para habilidade em cone:
+    // 0 0 1 0 0
+    // 0 1 1 1 0
+    // 1 1 1 1 1
+      /* CONE */
+    int cone[3][5] = {0};
 
-    printf("\nHabilidade Cruz:\n");
-    for(int i = 0; i < 5; i++){
+    cone[0][2] = 1;
+
+    for(int j = 1; j <= 3; j++)
+        cone[1][j] = 1;
+
+    for(int j = 0; j < 5; j++)
+        cone[2][j] = 1;
+
+    printf("\nHabilidade Cone:\n");
+    for(int i = 0; i < 3; i++){
         for(int j = 0; j < 5; j++)
-            printf("%d ", cruz[i][j]);
+            printf("%d ", cone[i][j]);
         printf("\n");
     }
-
-    /* OCTAEDRO */
+}
+    // Exemplo para habilidade em octaedro:
+    // 0 0 1 0 0
+    // 0 1 1 1 0
+    // 0 0 1 0 0
+   /* OCTAEDRO */
+   
     int octaedro[5][5] = {0};
 
     octaedro[0][2] = 1;
@@ -105,21 +119,27 @@ void nivelMestre() {
             printf("%d ", octaedro[i][j]);
         printf("\n");
     }
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
-    
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+
 
     // Exemplo para habilidade em cruz:
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
+
+    /* CRUZ */
+    int cruz[5][5] = {0};
+
+    for(int i = 0; i < 5; i++){
+        cruz[2][i] = 1;
+        cruz[i][2] = 1;
+    }
+
+    printf("\nHabilidade Cruz:\n");
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++)
+            printf("%d ", cruz[i][j]);
+        printf("\n");
+    }
 
     return 0;
 }
